@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaCheese, FaStar, FaUtensils } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
+import ChefDetailsSidebar from "../layouts/ChefDetailsSidebar";
 
 const ChefDetails = () => {
 
-  const [ChefRecipes, setChefRecipes] = useState([]);
+  const [allChefRecipes, setAllChefRecipes] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/recipes')
         .then(res => res.json())
-        .then(data => setChefRecipes(data))
+        .then(data => setAllChefRecipes(data))
     },[])
 
   const chefDetails = useLoaderData();
   const {id, picture_url, name, bio, recipes, years_of_experience, num_recipes, likes} = chefDetails;
+
+    const chefsRecipe = allChefRecipes.filter(acr => acr.id == id);
   return (
     <div className="md:flex gap-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl mt-16">
       <div className="grow">
@@ -45,8 +48,15 @@ const ChefDetails = () => {
         </div>
       </div>
       <div>
-        <h3>Chef's Recipe</h3>
-        
+        <h3 className="text-3xl font-bold text-red-500 mt-10 md:mt-0 lg:mt-0 mb-5">Chef's Recipes</h3>
+        <div>
+        {
+          chefsRecipe.map(cr => <ChefDetailsSidebar
+          key={cr.category_id}
+          cr={cr}
+          ></ChefDetailsSidebar>)
+        }
+        </div>
       </div>
     </div>
   );

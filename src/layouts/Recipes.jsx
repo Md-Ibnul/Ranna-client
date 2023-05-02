@@ -15,7 +15,7 @@ const Recipes = () => {
     return (
         <div className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl mt-14'>
             <h2 className='text-4xl font-bold mb-12 tracking-wide text-center'>Our Special <span className='text-red-600'>Recipes</span></h2>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
             {
                 recipes.slice(0, showAll ? 18 : 6).map(recipe => <RecipeCard
                 recipe={recipe}
@@ -25,7 +25,7 @@ const Recipes = () => {
         </div>
         <div className="text-center mt-5">
         {!showAll && (
-          <button onClick={() => handleShowAll()} className="btn btn-primary">
+          <button onClick={() => handleShowAll()} className="btn btn-secondary">
             See all Recipes
           </button>
         )}

@@ -13,7 +13,7 @@ const Chefs = () => {
 
     return (
         <div className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl mt-20'>
-            <h2 className='text-xl md:text-3xl font-bold text-center'>Our <span className='text-red-600'>Chefs</span></h2>
+            <h2 className='text-xl md:text-3xl font-bold text-center'>Our Excellent <span className='text-red-600'>Chefs</span></h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 mt-8 gap-8'>
             {
                 chefs.map(chef => <ChefsCard

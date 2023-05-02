@@ -1,0 +1,11 @@
+.special-bg{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../assets/special.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    position: relative;
+}

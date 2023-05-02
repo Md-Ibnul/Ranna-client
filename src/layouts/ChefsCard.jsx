@@ -11,8 +11,8 @@ const ChefsCard = ({ chef }) => {
     <h2 className="font-bold text-2xl">{chef.chef_name}</h2>
     <p className="text-xl font-medium">Years of Experience: <span className="text-red-600">{chef.years_of_experience}</span></p>
     <p className="text-lg font-medium">Number of Recipe: <FaCookieBite className="inline text-red-600" /> <span className="text-red-600">{chef.num_recipes} items</span></p>
-    <p className="text-lg font-medium">Likes: <span className="text-red-600">{chef.likes} <FaStar className="inline text-red-600" /> </span></p>
-      <button className="btn btn-primary">Buy Now</button>
+    <p className="text-lg font-medium">Likes: <span className="text-red-600">{chef.likes} <FaStar className="inline text-red-600 mb-2" /> </span></p>
+      <button className="btn btn-primary">View Details</button>
   </div>
 </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCookieBite, FaStar, FaStarOfLife } from 'react-icons/fa';
+import { Link, useParams } from "react-router-dom";
 
 const ChefsCard = ({ chef }) => {
   return (
@@ -12,7 +13,7 @@ const ChefsCard = ({ chef }) => {
     <p className="text-xl font-medium">Years of Experience: <span className="text-red-600">{chef.years_of_experience}</span></p>
     <p className="text-lg font-medium">Number of Recipe: <FaCookieBite className="inline text-red-600" /> <span className="text-red-600">{chef.num_recipes} items</span></p>
     <p className="text-lg font-medium">Likes: <span className="text-red-600">{chef.likes} <FaStar className="inline text-red-600 mb-2" /> </span></p>
-      <button className="btn btn-primary">View Details</button>
+      <Link to={`/chefDetails/${chef?.id}`}  className="btn btn-primary">View Details</Link>
   </div>
 </div>
   );

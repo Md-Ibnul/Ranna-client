@@ -3,6 +3,14 @@ import { FaCheese, FaStar, FaUtensils } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 
 const ChefDetails = () => {
+
+  const [ChefRecipes, setChefRecipes] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/recipes')
+        .then(res => res.json())
+        .then(data => setChefRecipes(data))
+    },[])
+
   const chefDetails = useLoaderData();
   const {id, picture_url, name, bio, recipes, years_of_experience, num_recipes, likes} = chefDetails;
   return (
@@ -38,18 +46,7 @@ const ChefDetails = () => {
       </div>
       <div>
         <h3>Chef's Recipe</h3>
-        <div>
-        <div className="card card-compact w-80 bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-        </div>
+        
       </div>
     </div>
   );

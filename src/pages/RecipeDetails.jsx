@@ -6,7 +6,7 @@ const RecipeDetails = () => {
   const recipeItem = useLoaderData();
   const {id, name, image_url, description, ingredients, time, servings} = recipeItem;
   return (
-    <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl mt-10">
+    <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl mt-10 mb-8">
       <div className="card md:card-side bg-base-100 shadow-xl">
         <div className="h-fit w-full">
           <img className="h-full w-full"

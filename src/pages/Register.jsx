@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from 'react';
 import sign from '../assets/undraw_sign_up_n6im.svg'
 import { FaFacebookF, FaGithub, FaGithubAlt, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../layouts/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup } from "firebase/auth";
 import app from '../firebase/firebase.config';
@@ -10,12 +10,15 @@ const auth = getAuth(app);
 
 const Register = () => {
 
+    const navigate = useNavigate();
+
     const googleProvider = new GoogleAuthProvider()
     const handleGoogleSignIn = () => {
         signInWithPopup(auth, googleProvider)
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
+            navigate('/');
         })
         .catch(error => {console.log(error);})
     };
@@ -26,6 +29,7 @@ const Register = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
+            navigate('/');
         })
         .catch(error => {console.log(error);})
     };
@@ -42,6 +46,7 @@ const Register = () => {
         .then(result => {
             const createdUser = result.user;
             console.log(createdUser);
+            navigate('/');
         })
         .catch(error => {console.log(error);})
     }

@@ -13,7 +13,7 @@ const Recipes = () => {
     setShowAll(true);
   };
     return (
-        <div className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl mt-14'>
+        <div className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl mt-14 mb-10'>
             <h2 className='text-4xl font-bold mb-12 tracking-wide text-center'>Our Special <span className='text-red-600'>Recipes</span></h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
             {

@@ -1,10 +1,34 @@
 import React from 'react';
+import logo from '../assets/logo-dark.png'
 
 const Footer = () => {
     return (
-        <div className=' py-5 bg-gray-300 mt-10 rounded'>
-            <h1 className='text-center'><span>&#169;</span>2023 Ranna. website by <span className='text-red-500'>Md. Ibnul Hasan</span></h1>
-        </div>
+        <footer className="footer p-10 bg-base-200 text-base-content">
+  <div>
+    <img src={logo} alt="Logo" />
+    <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+  </div> 
+  <div>
+    <span className="footer-title">Services</span> 
+    <a className="link link-hover">Branding</a> 
+    <a className="link link-hover">Design</a> 
+    <a className="link link-hover">Marketing</a> 
+    <a className="link link-hover">Advertisement</a>
+  </div> 
+  <div>
+    <span className="footer-title">Company</span> 
+    <a className="link link-hover">About us</a> 
+    <a className="link link-hover">Contact</a> 
+    <a className="link link-hover">Jobs</a> 
+    <a className="link link-hover">Press kit</a>
+  </div> 
+  <div>
+    <span className="footer-title">Legal</span> 
+    <a className="link link-hover">Terms of use</a> 
+    <a className="link link-hover">Privacy policy</a> 
+    <a className="link link-hover">Cookie policy</a>
+  </div>
+</footer>
     );
 };
 

@@ -23,12 +23,11 @@ const NavRanna = () => {
             <NavLink>Blog</NavLink>
           </ul>
         </li>
-        <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="w-32">
+    <Link to='/' className="w-32">
         <img src={logo} alt="" />
-    </a>
+    </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

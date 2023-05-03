@@ -8,12 +8,12 @@ const RecipeDetails = () => {
   return (
     <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl mt-10">
       <div className="card md:card-side bg-base-100 shadow-xl">
-        <figure>
-          <img
+        <div className="h-fit w-full">
+          <img className="h-full w-full"
             src={image_url}
             alt="Image"
           />
-        </figure>
+        </div>
         <div className="card-body ms-10 me=10">
           <h2 className="card-title text-3xl font-bold tracking-wide">{name}</h2>
           <p className="text-lg font-medium">{description}</p>

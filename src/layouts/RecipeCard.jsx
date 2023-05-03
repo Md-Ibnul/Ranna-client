@@ -15,7 +15,7 @@ const RecipeCard = ({ recipe }) => {
         </div>
         <div className="card-body p-2 ms-6">
           <h2 className="card-title font-bold text-xl">{name}</h2>
-          <p className="text-lg">{description.slice(0, 50)}... <Link to={`/recipeDetails/${category_id}`} className='text-red-500'>Read More</Link></p>
+          <p className="text-lg">{description.slice(0, 50)}... <Link to={`/recipeDetails/${category_id}`} className='text-red-500'>View Details</Link></p>
           <p className="text-lg font-medium"><FaClock className="text-red-500 inline me-2 mb-1" />Time: {time}</p>
           <p className="text-lg font-medium"><FaPeopleArrows className="text-red-500 inline me-2 mb-1" />Servings: {servings} peoples</p>
         </div>

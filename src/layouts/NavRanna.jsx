@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../assets/logo-dark.png';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from './AuthProvider';
 
 const NavRanna = () => {
+
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+    .then()
+    .catch(error => {
+      console.log(error);
+    })
+  }
+
     return (
         <div className='mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
             <div className="navbar bg-base-100">
@@ -36,7 +48,17 @@ const NavRanna = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Login</a>
+    {
+      user ?
+      <button onClick={handleLogOut} className='me-4 btn btn-sm text-white btn-error'>Log Out</button> :
+      <Link className='btn btn-sm text-white btn-secondaty' to='/login'>Login</Link>
+    }
+    {
+      user && 
+      <div className="rounded-full w-12 tooltip tooltip-bottom" data-tip="hello">
+      <img className='rounded-full' src='https://i.pravatar.cc/150?img=3' alt="" />
+    </div>
+    }
   </div>
 </div>
         </div>

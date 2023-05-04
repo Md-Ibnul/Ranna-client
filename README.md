@@ -15,7 +15,7 @@ Hosted in Netlify -> [Ranna](https://ranna-e1bfa.web.app/)
 
 
 ## Complete Project
-Github Repo -> [Ranna-complete](https://github.com/Porgramming-Hero-web-course/b7a9-career-hub-Md-Ibnul)
+Github Repo -> [Ranna-complete](https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-Md-Ibnul)
 
 
 ## React Router Dom v6.4 

@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 
 const ChefsCard = ({ chef }) => {
   return (
-    <div className="card card-compact w-96 bg-base-100 shadow-xl">
+    <div className="card card-compact md:w-96 bg-base-100 shadow-xl">
   <div className="p-4">
   <img className="w-full rounded" src={chef.chef_photo} alt="Shoes" />
   </div>

@@ -11,7 +11,7 @@
 6. Ready to use.
 
 ## Live Link
-Hosted in Netlify -> [Ranna](https://incredible-cocada-206fda.netlify.app/)
+Hosted in Netlify -> [Ranna](https://ranna-e1bfa.web.app/)
 
 
 ## Complete Project

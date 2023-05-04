@@ -6,7 +6,7 @@ const RecipeCard = ({ recipe }) => {
   const { name, image_url, description, time, servings, category_id } = recipe;
   return (
     <div>
-      <div className="card card-compact md:w-96 bg-base-100 shadow-xl">
+      <div className="mx-2 md:mx-0 card card-compact md:w-96 bg-base-100 shadow-xl">
         <div className="md:w-96 h-96">
           <img className="w-full h-full" src={image_url} alt="Image" />
         </div>

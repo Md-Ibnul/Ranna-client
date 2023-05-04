@@ -7,8 +7,8 @@ const ChefDetailsSidebar = ({ cr }) => {
   const { name, image_url, description, time, servings, category_id } = cr;
   return (
     <div>
-      <div className="card card-compact w-96 bg-base-100 shadow-xl mb-5">
-        <div className="w-96 h-52">
+      <div className="card card-compact md:w-96 bg-base-100 shadow-xl mb-5">
+        <div className="md:w-96 h-52">
           <img className="w-full h-full" src={image_url} alt="Image" />
         </div>
         <div className="card-body p-2 ms-6">

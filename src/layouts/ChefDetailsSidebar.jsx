@@ -3,6 +3,7 @@ import { FaClock, FaPeopleArrows } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const ChefDetailsSidebar = ({cr}) => {
+  console.log(cr);
     const{name, image_url, description, time, servings, category_id} =cr;
     return (
         <div>

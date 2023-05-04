@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-container{
+    @apply mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl
+}
+
+.active{
+    @apply font-medium tracking-wide text-red-500 bg-transparent transition-colors duration-200 hover:text-red-400
+  }
+  
+  .default{
+    @apply font-thin tracking-wide text-gray-800 transition-colors duration-200 hover:text-red-400
+  }

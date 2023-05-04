@@ -7,6 +7,7 @@ const Footer = () => {
   <div>
     <img src={logo} alt="Logo" />
     <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+    <p>&#169; This website by <span className='text-red-500'>Md. Ibnul Hasan</span></p>
   </div> 
   <div>
     <span className="footer-title">Services</span> 

@@ -8,7 +8,7 @@ const auth = getAuth(app);
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loader, setLoader] = useState(true);
-
+    
     const signIn = (email, password) => {
         setLoader(true);
         return signInWithEmailAndPassword(auth, email, password);

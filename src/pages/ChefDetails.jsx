@@ -2,12 +2,20 @@ import React, { useEffect, useState } from "react";
 import { FaCheese, FaStar, FaUtensils } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import ChefDetailsSidebar from "../layouts/ChefDetailsSidebar";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ChefDetails = () => {
 
   const [allChefRecipes, setAllChefRecipes] = useState([]);
+
+  const handleFavClick = event => {
+    event.currentTarget.disabled = true;
+    toast('Favorite added')
+  };
+
     useEffect(() => {
-        fetch('http://localhost:5000/recipes')
+        fetch('https://ranna-server-md-ibnul.vercel.app/recipes')
         .then(res => res.json())
         .then(data => setAllChefRecipes(data))
     },[])
@@ -17,7 +25,8 @@ const ChefDetails = () => {
 
     const chefsRecipe = allChefRecipes.filter(acr => acr.id == id);
   return (
-    <div className="md:flex gap-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl mt-16">
+    <div className="md:flex gap-8 my-container mt-16 mb-10">
+      <ToastContainer />
       <div className="grow">
         <div className="card glass">
             <img className="rounded"
@@ -41,7 +50,7 @@ const ChefDetails = () => {
                     <p className="text-xl mb-4"><FaUtensils className="inline text-red-500 me-2" />Experience: {years_of_experience} Years</p>
                     <p className="text-xl mb-4"><FaCheese className="inline text-red-500 me-2" /> Unique Recipes: {num_recipes}</p>
                     <p className="text-xl mb-4"><FaStar className="inline mb-2 text-red-500 me-2" /> Rating: {likes}</p>
-                    <button className="py-2 px-4 bg-red-700 text-white font-bold rounded-md">Favorite</button>
+                    <button onClick={handleFavClick} className="py-2 px-4 bg-red-700 text-white font-bold rounded-md">Favorite Chef</button>
                 </div>
             </div>
           </div>

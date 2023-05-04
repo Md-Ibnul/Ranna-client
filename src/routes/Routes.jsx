@@ -34,12 +34,12 @@ const router = createBrowserRouter([
             {
                 path: '/chefDetails/:id',
                 element: <PrivateRoute><ChefDetails /></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/chefDetails/${params.id}`)
+                loader: ({params}) => fetch(`https://ranna-server-md-ibnul.vercel.app/chefDetails/${params.id}`)
             },
             {
                 path: '/recipeDetails/:category_id',
                 element: <PrivateRoute><RecipeDetails /></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/recipeDetails/${params.category_id}`)
+                loader: ({params}) => fetch(`https://ranna-server-md-ibnul.vercel.app/recipeDetails/${params.category_id}`)
             },
         ]
     }
